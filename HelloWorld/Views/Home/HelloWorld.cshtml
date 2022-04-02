@@ -1,0 +1,22 @@
+﻿@model HelloWorld.Models.Name;
+
+@{
+    ViewData["Title"] = "Hello Page";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HelloWorld</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Styles.css" />
+</head>
+<body>
+    <div style="text-align:center; padding-top:300px">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary()
+        <h2 style="padding-right:55px;"> Enter your name  @Html.TextBoxFor(x => x.NamePerson)</h2>
+        <input type ="submit" value="Оk">
+    }
+        </div>
+</body>
+</html>
